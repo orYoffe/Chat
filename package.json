@@ -1,0 +1,62 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Express chat app with react redex react router and socket.io",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src -d ./dist && webpack -p --progress",
+    "serve": "node ./dist/server.js",
+    "start": "npm run build && npm run serve",
+    "dev-server": "nodemon ./src/server.js --exec babel-node --presets es2015,stage-2",
+    "dev-webpack": "webpack --watch --progress -d --config webpack.config.dev.js",
+    "dev1": "npm run dev-server",
+    "dev2": "npm run dev-webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orYoffe/Chat.git"
+  },
+  "author": "Or Yoffe <ragiop07@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orYoffe/Chat/issues"
+  },
+  "engines": {
+    "node": "6.2.2"
+  },
+  "homepage": "https://github.com/orYoffe/Chat#readme",
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "express-handlebars": "^3.0.0",
+    "morgan": "~1.7.0",
+    "nodemon": "^1.9.2",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.5.2",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.11.0",
+    "browser-sync": "^2.13.0",
+    "browser-sync-webpack-plugin": "^1.1.0",
+    "eslint": "^3.0.1",
+    "eslint-loader": "^1.4.1",
+    "file-loader": "^0.9.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
