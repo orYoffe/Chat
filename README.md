@@ -8,7 +8,7 @@ First make sure you have installed ```Nodejs```(5.0+), then clone this repo and 
   Run ```npm start``` from the project root directory.
   This will load your server on http://localhost:3000
 
-## Develop
+## Develop (sockets won't work in ```Browsersync``` port)
 1. Open another session in terminal, and use the command below to start express server with ```nodemon``` and:
 
       Run ```npm run dev1``` or ```npm run dev-server``` from the project root directory.
