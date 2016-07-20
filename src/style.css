@@ -1,0 +1,19 @@
+ul {
+  list-style: none;
+}
+
+.chat {
+  width: 100%;
+}
+
+.messages {
+  width: 70%;
+  float: right;
+}
+.messages li {
+
+}
+.user-list {
+  width: 30%;
+  float: left;
+}

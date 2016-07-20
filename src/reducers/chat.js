@@ -1,7 +1,5 @@
-import {CHAT_ROOM_CREATE_RECEIVE} from '../actions/ChatActions'
-const initialState = {
-  loaded: false
-}
+import {USERNAME_CREATE_RECEIVE, CHAT_INFO_RECEIVE} from '../actions/ChatActions'
+const initialState = {}
 
 export default function reducer(state = initialState, action = {}) {
   if(!action || !action.type){
@@ -9,9 +7,10 @@ export default function reducer(state = initialState, action = {}) {
   }
 
   switch (action.type) {
-    case CHAT_ROOM_CREATE_RECEIVE:
-      console.log(CHAT_ROOM_CREATE_RECEIVE + ' response', action.response)
-      return state
+    case USERNAME_CREATE_RECEIVE:
+      return Object.assign({}, state, action.response)
+    case CHAT_INFO_RECEIVE:
+      return Object.assign({}, state, action.response)
     default:
       return state
   }

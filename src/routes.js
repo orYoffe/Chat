@@ -8,8 +8,8 @@ import { Route, IndexRoute } from 'react-router'
 const routes = (
   <Route path="/" component={Index}>
     <IndexRoute component={Home}/>
-    <Route path="/chat/:chatId" component={Chat}/>
-    <Route path="*" component={NoMatch}/>
+    <Route path="/chat" component={Chat}/>
+    <Route path="/*" component={NoMatch}/>
   </Route>
 );
 

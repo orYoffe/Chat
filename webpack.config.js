@@ -19,6 +19,11 @@ module.exports = {
       ],
       loaders: [
         {
+          test: /\.css$/,
+          exclude: /(node_modules|bower_components)/,
+          loader: 'style-loader!css-loader?sourceMap'
+        },
+        {
           test: /\.(js|jsx)$/,
           exclude: /(node_modules|bower_components)/,
           loader: 'babel',

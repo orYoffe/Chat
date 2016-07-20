@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import {connect} from 'react-redux';
-import {createChatRoomAction} from '../actions/ChatActions'
+import {connect} from 'react-redux'
+import {createUsernameAction} from '../actions/ChatActions'
 
 export class Home extends Component {
   constructor (props) {
-      super(props);
+      super(props)
       this.state = {username: ''}
   }
 
@@ -28,24 +28,22 @@ export class Home extends Component {
             <input type="text"
               onChange={this.onUsernameChange.bind(this)}
               value={this.state.username}
-              placeholder="username"
+              placeholder="Username"
               />
-            <input type="submit" onClick={this.onSubmit.bind(this)} value="Create Chat"/>
+            <input type="submit" onClick={this.onSubmit.bind(this)} value="Enter Chat"/>
           </form>
-      );
+      )
   }
-};
+}
 
 export const mapStateToProps = state => {
-  console.log('state', state);
-  return state
+  return {}
 }
 
 export const mapDispatchToprops = dispatch => {
   return {
-    createChatRoom: username => (createChatRoomAction(username)(dispatch))
+    createChatRoom: username => (createUsernameAction(username)(dispatch))
   }
 }
 
-
-export default connect(mapStateToProps, mapDispatchToprops)(Home);
+export default connect(mapStateToProps, mapDispatchToprops)(Home)

@@ -5,11 +5,11 @@ const api = (method) => (url, data) => {
       xhr.open('GET', encodeURI('api/' + url))
     }else{
       xhr.open('POST', encodeURI('api/' + url), true)
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+      xhr.setRequestHeader('Content-Type', "application/json;charset=UTF-8")
     }
     xhr.onload = function() {
       if (xhr.status === 200) {
-        resolve(xhr.responseText)
+        resolve(JSON.parse(xhr.responseText))
       }else {
         reject(xhr.status)
       }

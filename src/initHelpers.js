@@ -1,7 +1,7 @@
 
 /**
- * Normalize a port into a number, string, or false.
- */
+* Normalize a port into a number, string, or false.
+*/
 
 export function normalizePort(val) {
   var port = parseInt(val, 10);
@@ -20,8 +20,8 @@ export function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTP server "error" event.
- */
+* Event listener for HTTP server "error" event.
+*/
 
 export function onError(error) {
   if (error.syscall !== 'listen') {
@@ -29,55 +29,55 @@ export function onError(error) {
   }
 
   var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  ? 'Pipe ' + port
+  : 'Port ' + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
+    console.error(bind + ' requires elevated privileges');
+    process.exit(1);
+    break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
+    console.error(bind + ' is already in use');
+    process.exit(1);
+    break;
     default:
-      throw error;
+    throw error;
   }
 }
 
 export function renderFullPage() {
   return `
-  <!doctype html>
+  <!DOCTYPE html>
   <html>
     <head>
       <meta charset="UTF-8">
-        <title>chat</title>
-        </head>
-        <body>
-          <div id="root"></div>
-          <script src="bundle.js"></script>
-        </body>
-      </html>
-      `
+      <title>chat</title>
+    </head>
+    <body>
+      <div id="root"></div>
+      <script src="bundle.js"></script>
+    </body>
+  </html>
+  `
 }
 
 export function renderError(err) {
   return `
-  <!doctype html>
+  <!DOCTYPE html>
   <html>
     <head>
       <meta charset="UTF-8">
-        <title>chat</title>
-        </head>
-        <body>
-          <h1>error</h1>
-          <h1>${err.message}</h1>
-          <p>${err}</p>
-        </body>
-      </html>
-      `
+      <title>chat</title>
+    </head>
+    <body>
+      <h1>error</h1>
+      <h1>${err.message}</h1>
+      <p>${err}</p>
+    </body>
+  </html>
+  `
 }
 
 export default {
