@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Index from './containers/Index'
-import NoMatch from './containers/NoMatch'
-import Home from './containers/Home'
-import Chat from './containers/Chat'
+import Index from './components/Index'
+import NoMatch from './components/NoMatch'
+import Home from './components/Home'
+import Chat from './components/Chat'
 import { Route, IndexRoute } from 'react-router'
 
 const routes = (

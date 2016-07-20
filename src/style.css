@@ -1,19 +1,91 @@
-ul {
+/* minimal styles so we could see everything */
+* {
+  box-sizing: border-box;
+}
+
+ul, li {
   list-style: none;
 }
 
-.chat {
+form {
+  padding: 20px;
+  background: #143;
+  display: inline-block;
   width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+form input[type=text] {
+  width: 200px;
+}
+
+form input {
+  height: 30px;
+}
+
+.chat form{
+  top: initial;
+  bottom: 0;
+}
+
+.chat {
+  width: calc(100% -70px);
+  background: rgba(0,0,0,.1);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .messages {
+  height: 100%;
   width: 70%;
   float: right;
+  background: rgba(0,0,0,.3);
+  border-radius: 3px;
 }
-.messages li {
 
+ul li {
+  position: relative;
+  margin: 10px 0;
+  width: 80%;
 }
+
+ul li:not(:first-child):after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border: 1px solid #ccc;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+ul li:first-child {
+  font-size: 21px;
+  text-decoration: underline;
+  margin: 10px;
+}
+
 .user-list {
+  height: 100%;
   width: 30%;
   float: left;
+  background: rgba(0,0,155,.4);
+}
+
+.user {
+  color: #030;
+  font-weight: 900;
+}
+
+.message {
+
 }

@@ -1,4 +1,4 @@
-import {USERNAME_CREATE_RECEIVE, CHAT_INFO_RECEIVE} from '../actions/ChatActions'
+import {CHAT_INFO_RECEIVE} from '../actions/ChatActions'
 const initialState = {}
 
 export default function reducer(state = initialState, action = {}) {
@@ -7,8 +7,6 @@ export default function reducer(state = initialState, action = {}) {
   }
 
   switch (action.type) {
-    case USERNAME_CREATE_RECEIVE:
-      return Object.assign({}, state, action.response)
     case CHAT_INFO_RECEIVE:
       return Object.assign({}, state, action.response)
     default:

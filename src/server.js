@@ -7,6 +7,7 @@ import hbs from 'express-handlebars'
 import {renderFullPage, normalizePort, onError, renderError} from './initHelpers'
 import http from 'http'
 import api from './api'
+import sockets from './sockets'
 
 const folderName = path.basename(__dirname)
 if(folderName !== 'src' && folderName === 'dist'){
@@ -39,17 +40,6 @@ app.use(function(req, res, next) {
 
 // error handlers
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500)
-    res.send(renderError(err))
-  })
-}
-
-// production error handler
-// no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500)
   res.send(renderError(err))
@@ -59,6 +49,10 @@ app.use(function(err, req, res, next) {
 const port = normalizePort(process.env.PORT || '3000')
 app.set('port', port)
 let server = http.createServer(app)
+
+// initiate chat sockets
+sockets(server)
+
 function onListening() {
   console.log("server listening at http://localhost:" + port)
 }
