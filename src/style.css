@@ -16,15 +16,26 @@ form {
   left: 0;
   right: 0;
   top: 0;
+  color: #f60;
   text-align: center;
+  padding: 50px 50px 80px;
 }
 
 form input[type=text] {
   width: 200px;
+  border-radius: 8px 0 0 8px;
+  margin-right: 4px;
+  padding: 20px;
+  background-color: #FFF;
 }
 
 form input {
-  height: 30px;
+  border-radius: 0 8px 8px 0;
+  background-color: #f93;
+  outline: none;
+  border-width: 0;
+  padding: 20px;
+  box-shadow: 0 0 3px #f93;
 }
 
 .chat form{
@@ -33,18 +44,18 @@ form input {
 }
 
 .chat {
-  width: calc(100% -70px);
+  width: 100%;
   background: rgba(0,0,0,.1);
-  height: 100%;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 185px;
   left: 0;
   right: 0;
+  height: calc(100% - 185px);
+  overflow-y: scroll;
 }
 
 .messages {
-  height: 100%;
   width: 70%;
   float: right;
   background: rgba(0,0,0,.3);
@@ -55,6 +66,7 @@ ul li {
   position: relative;
   margin: 10px 0;
   width: 80%;
+  padding: 10px 0;
 }
 
 ul li:not(:first-child):after {
@@ -75,7 +87,6 @@ ul li:first-child {
 }
 
 .user-list {
-  height: 100%;
   width: 30%;
   float: left;
   background: rgba(0,0,155,.4);

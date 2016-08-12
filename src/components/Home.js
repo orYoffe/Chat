@@ -16,8 +16,6 @@ export class Home extends Component {
     e.preventDefault()
     if(typeof this.state.username === 'string' && this.state.username.length > 2){
       this.props.createChatRoom(this.state.username)
-    }else{
-      alert('username must be over 2 charcters')
     }
   }
 
@@ -25,6 +23,8 @@ export class Home extends Component {
     const props = {}
       return (
           <form>
+            <h1>Welcome to Chat</h1>
+            <h3>Please fill your User name to enter :)</h3>
             <input type="text"
               onChange={this.onUsernameChange.bind(this)}
               value={this.state.username}

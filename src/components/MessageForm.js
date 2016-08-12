@@ -36,8 +36,6 @@ export class MessageForm extends Component {
       socket.emit('chat message', this.state.message)
       this.setState({message: ''})
       return false
-    }else{
-      alert('message must be at least one charcter')
     }
   }
 
