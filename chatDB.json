@@ -1,1 +1,9 @@
-{"0":{"username":"Example User","message":"Example message"},"1":{"username":"Another Example User","message":"Another Example message"},"2":{"message":"hi","username":"oryoffe"},"3":{"message":"hello","username":"Or Yoffe 2"},"4":{"message":"hello magyarlaki","username":"or the jew"}}
+{
+  "0": { "username": "Example User", "message": "Example message" },
+  "1": {
+    "username": "Another Example User",
+    "message": "Another Example message"
+  },
+  "2": { "message": "hi", "username": "oryoffe" },
+  "3": { "message": "hello", "username": "Or Yoffe 2" }
+}
